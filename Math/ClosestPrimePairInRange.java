@@ -42,7 +42,6 @@ public class ClosestPrimePairInRange {
         int[] ans = {-1,-1};
         int diff =Integer.MAX_VALUE;
         for(int i = left; i <= right; ++i){
-            System.out.println(i +" "+sieve[i]);
             if(sieve[i] == true){
                 if(first == -1) {first = i; fi = i;}
                 else if(second == -1) {
@@ -60,8 +59,11 @@ public class ClosestPrimePairInRange {
                 }
             }
         }
-        if(first == -1 || second == -1) System.out.println(ans);
-        ans[0] =fi; ans [1] = si;
-        System.out.println(Arrays.toString(ans));
+        if(first == -1 || second == -1) System.out.println(ans[0] + " " + ans[1]);
+        else {
+            ans[0] = fi;
+            ans[1] = si;
+            System.out.println(ans[0] + " " + ans[1]);
+        }
     }
 }
