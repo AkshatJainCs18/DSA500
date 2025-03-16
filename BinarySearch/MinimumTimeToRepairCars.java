@@ -34,6 +34,6 @@ public class MinimumTimeToRepairCars {
             }
             l = mid + 1;
         }
-        System.out.println(ans);
+        System.out.println(++ans);
     }
 }
