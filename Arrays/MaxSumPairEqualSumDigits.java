@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /* leetcode 2342 */
 public class MaxSumPairEqualSumDigits {
     public int maximumSum(int[] arr) {

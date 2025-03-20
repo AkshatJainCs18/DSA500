@@ -1,6 +1,9 @@
 /*
 
-
+Solution:
+Either use bit manipulation, where we can express number in base 3. if base 3 representation can be expressed as only 1s and 0s,
+it is valid.
+Otherwise, we can also keep subtracting max power of 3 from n until num becomes zero or power becomes <0.
 1780. Check if Number is a Sum of Powers of Three
 Solved
 Medium

@@ -18,14 +18,14 @@ Note that the operations are applied sequentially, not all at once.
 
 public class MoveZeroEndTwoPointer {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,3,4,2,2,0};
+        int[] arr = {0,1,2,2,3,0,4,2};
         int c = -1;
         for(int i = 0; i<arr.length; ++i){
-            if(i+1<arr.length && arr[i]==arr[i+1]){
-                arr[i] *= 2;
-                arr[i+1] = 0;
-            }
-            if(arr[i]!=0){
+//            if(i+1<arr.length && arr[i]==arr[i+1]){
+//                arr[i] *= 2;
+//                arr[i+1] = 0;
+//            }
+            if(arr[i]!=2){
                 c++;
                 int temp = arr[c];
                 arr[c] = arr[i];
@@ -35,5 +35,6 @@ public class MoveZeroEndTwoPointer {
         for(int i : arr){
             System.out.print(i+" ");
         }
+        System.out.println(c);
     }
 }

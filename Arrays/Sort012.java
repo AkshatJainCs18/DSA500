@@ -1,3 +1,5 @@
+package DSA500.Arrays;
+
 /*
 Program to sort an array of 0,1, and 2 such that its done in O(n) time and O(1)  space.
 One way is two pass approach by counting all 0 1 and 2.

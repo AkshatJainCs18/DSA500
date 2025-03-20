@@ -30,11 +30,11 @@ Reset number of dashes before every function call. In every call increase dashes
  */
 class TreeNode {
     int val;
-    TreeNode left;
-    TreeNode right;
+    treeNode left;
+    treeNode right;
     TreeNode() {}
     TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    TreeNode(int val, treeNode left, treeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
@@ -43,7 +43,7 @@ class TreeNode {
 public class RecoverTreeFromPreorder {
     private static int idx;
     private static int dash;
-    public static void makeTree(TreeNode root,String s,int depth){
+    public static void makeTree(treeNode root, String s, int depth){
         if(idx==s.length())
             return;
         while(s.charAt(idx)=='-'){
@@ -58,7 +58,7 @@ public class RecoverTreeFromPreorder {
                 idx++;
             }
             dash = 0;
-            TreeNode curr = new TreeNode(sum);
+            treeNode curr = new treeNode(sum);
             if(root.val == 0){
                 root.val = curr.val;
             }
@@ -74,8 +74,8 @@ public class RecoverTreeFromPreorder {
             makeTree(root,s,depth+1);
         }
     }
-    public static TreeNode recoverFromPreorder(String traversal) {
-        TreeNode root = new TreeNode(0);
+    public static treeNode recoverFromPreorder(String traversal) {
+        treeNode root = new treeNode(0);
         root.left = null;
         root.right = null;
         idx = 0;
